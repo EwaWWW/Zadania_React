@@ -7,7 +7,7 @@ const players = [
     {id: 6, name: 'The Blok', number: 55, bio: 'Mówi tylko w swoim języku i tylko Shaker potrafi go zrozumieć. Ma brata Napada grającego w Technicali. Jest niepokonany na obronie.'},
     {id: 7, name: 'North Shaw ', number: 8, bio: 'Gra na obronie. Jest idealnym łącznikiem między obroną a atakiem. Kocha serfować na desce, uwielbia przygody i ma swój własny program Co teraz zrobisz?'},
     {id: 8, name: 'Big Bo', number: 1, bio: 'Jest bramkarzem drużyny Supa Strikas. Codziennie odbywa specjalny trening. Pochodzi z Little Town. Wydał poradnik dla bramkarzy.'},
-    {id: 9, name: 'Clauss von Klinkenkoffen', v: 2, bio: 'Pochodzi z Niemiec. Jest bardzo oryginalny. Nie zawsze grał w pierwszym składzie. Jest niezdarą i czasami zadaje głupie pytania. W drużynie pełni funkcję napastnika. Lubi książki detektywistyczne.'},
+    {id: 9, name: 'Clauss von Klinkenkoffen', number: 2, bio: 'Pochodzi z Niemiec. Jest bardzo oryginalny. Nie zawsze grał w pierwszym składzie. Jest niezdarą i czasami zadaje głupie pytania. W drużynie pełni funkcję napastnika. Lubi książki detektywistyczne.'},
     {id: 10, name: 'Lankey', number: 23, bio: 'Rezerwowy napastnik. Boi się, gdy ma wejść na boisko. Koleguje się z Klausem. '},
     {id: 11, name: 'Sokole Oko ', number: 4, bio: 'Obrońca. Nie zawsze grał w pierwszym składzie. Ma charakterystyczny czarny warkocz.'},
     {id: 12, name: 'Noah Murdoch', number: 3, bio: 'Rezerwowy bramkarz. '},
