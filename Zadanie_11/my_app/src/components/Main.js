@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import players from "../data/players.js";
+import players from "../data/Players.js";
 
 import {
     Table,
@@ -21,7 +21,7 @@ export default () => {
     <Table>
     <TableHeader displaySelectAll={state.showCheckboxes}>
 <TableRow>
-    <TableHeaderClumn>Nazwa</TableHeaderClumn>
+    <TableHeaderColumn>Nazwa</TableHeaderColumn>
     <TableHeaderColumn>Numer koszulki</TableHeaderColumn>
     </TableRow>
     </TableHeader>

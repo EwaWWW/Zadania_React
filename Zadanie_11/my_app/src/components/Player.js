@@ -1,5 +1,5 @@
 import React from 'react';
-import players from '../data/players';
+import players from '../data/Players.js';
 import { Link } from 'react-router-dom';
 
 export default (props) => {

@@ -7,7 +7,7 @@ import Main from './Main';
 import Player from './Player';
 import Footer from './Footer';
 
-export default class App extends Component {
+export default class App extends React.Component {
     render() {
         return <BrowserRouter>
         <MuiThemeProvider>
