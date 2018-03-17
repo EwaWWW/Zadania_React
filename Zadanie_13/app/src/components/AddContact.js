@@ -60,7 +60,7 @@ export default connect (
     dispatch =>({
         addContact:({name, phone, email, category}) =>
             dispatch({
-                type: 'ADD_TASK',
+                type: 'ADD_CONTACT',
                 name,
                 phone,
                 email,
