@@ -22,6 +22,6 @@ zrobiona za pomocą listy nienumerowanej ( <ul>)
 imię i nazwisko niech się pogrubione ( <strong>)
 pod ich nazwami i nazwiskiem niech w jednej linii wyświetlają się: numer telefonu i adres e-mail (oddzielone przecinkiem i spacją - tak jak normalnie w zdaniu)
 Ostatnim elementem liści beda Nazwy kategorii Dodaj - tutaj Projekt daję małe utrudnienie: kategorie Przy zapisywaniu formularza podajemy Jako tekst z przecinkami, ale Przy wyświetlaniu chcialbym, zeby nazwa każdej kategorii Dodaj znalazła SIĘ W nawiasach kwadratowych (NP. [rodzina], [praca])
-W zadaniu pozostawiam Wam dużą swobodę - docenię, najczęściej stosuję się, nie naciskaję w CSS i wykonam projekt najprostszy, najbardziej zbliżony do wcześniejszej deklaracji Puść oczko
 
-Wam Kamil (tworzenie todolisty), ralowa, metoda klas i tego, ile na siódemkę zajmuje się podzielnością projektu - to jest, na coś przyjść się skupić najbardziej (synchronizację z każdym dniem).
+Zadanie 14
+Przerobić zadanie domowe nr 13 aby dodawanie/usuwanie kontaktów odbywało się za pomocą reduxa
