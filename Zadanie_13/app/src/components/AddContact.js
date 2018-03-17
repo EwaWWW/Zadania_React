@@ -1,15 +1,17 @@
 import React from 'react';
+import {connect} from 'redux'
 
-const primaryState = {
+
+const initialState = {
     contactName: '',
     contactPhone: '',
     contactEmail: '',
     contactCategory: ''
 };
 
-export default class AddContact extends React.Component {
+class AddContact extends React.Component {
 
-    state = primaryState;
+    state = initialState;
 
     handleChange = ({ target: {name, value}})=> {
         this.setState ({[name]: value})
@@ -18,8 +20,10 @@ export default class AddContact extends React.Component {
 
     handleSubmit = event => {
         event.preventDefault();
+
         this.props.addContact(this.state);
-        this.setState(primaryState)
+
+        this.setState(initialState)
     };
 
     inputRender = fieldName => {
@@ -34,16 +38,33 @@ export default class AddContact extends React.Component {
     render (){
         return (
             <React.Fragment>
-                <h1>Add Contact</h1>
+                <h1> ADD CONTACT</h1>
                 <form onSubmit={this.handleSubmit}>
                     Name: {this.inputRender('contactName')}
                     <br/>Phone: {this.inputRender('contactPhone')}
                     <br/> E-mail: {this.inputRender('contactEmail')}
                     <br/> Category: {this.inputRender('contactCategory')}
 
-                    <button>Add</button>
+                    <button> ADD </button>
                 </form>
             </React.Fragment>
         )
     }
 }
+
+export default connect (
+    state => ({
+        ...state
+    }),
+
+    dispatch =>({
+        addContact:({name, phone, email, category}) =>
+            dispatch({
+                type: 'ADD_TASK',
+                name,
+                phone,
+                email,
+                category
+            })
+    })
+)(AddContact)

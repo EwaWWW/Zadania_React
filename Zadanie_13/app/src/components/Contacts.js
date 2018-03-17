@@ -1,9 +1,10 @@
 import React from 'react';
+import {connect} from 'redux'
 
 import ContactList from './ContactList';
 import AddContact from "./AddContact";
 
-export default class Contacts extends React.Component {
+class Contacts extends React.Component {
 
      state ={
         contacts: [
@@ -14,6 +15,19 @@ export default class Contacts extends React.Component {
         ],
     };
 
+    updateContact = (contactId, updatedContact) => {
+        this.setState({
+            contacts: this.state.contacts.map(
+                contact =>
+                    contact.id !== contactId
+                        ? contact
+                        : {
+                            ...contact,
+                            ...updatedContact
+                        }
+            )
+        })
+    }
 
     addContact = ({contactName, contactPhone, contactEmail, contactCategory}) => {
         this.setState({
@@ -40,12 +54,18 @@ export default class Contacts extends React.Component {
     render(){
         return(
             <React.Fragment>
+                <h1> CONTACTS </h1>
+                <AddContact addContact = {this.addContact}/>
                 <ContactList
                     contacts={this.state.contacts}
+                    updateContact = {this.updateContact}
                     removeContact = {this.removeContact}/>
-                <AddContact addContact = {this.addContact}/>
 
             </React.Fragment>
         )
     }
 }
+
+export default connect (state => ({
+    contacts: state.contacts.data
+}))(Contacts)

@@ -1,6 +1,7 @@
 import React from 'react';
+import {connect} from 'redux'
 
-export default class ContactList extends React.Component {
+class ContactList extends React.Component {
 
     handleRemoveClick = event => {
         const contactId = event.target.dataset.contactId;
@@ -30,3 +31,7 @@ export default class ContactList extends React.Component {
         )
     }
 }
+
+export default connect (state => ({
+    contacts: state.contacts.data
+}))(ContactList)
