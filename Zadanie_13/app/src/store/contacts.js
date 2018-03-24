@@ -12,9 +12,9 @@ export default (state = initialState, action = {}) => {
             };
         case 'ADD CONTACT':
             return {
-                ... state,
+                ...state,
                 data: state.data.concat({
-                    id: Data.now().toString(32),
+                    id: Date.now().toString(32),
                     name: action.name,
                     hone: action.phone,
                     email: action.email,

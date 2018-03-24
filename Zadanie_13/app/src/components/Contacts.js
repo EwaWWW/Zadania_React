@@ -1,10 +1,10 @@
-import React from 'react';
-import {connect} from 'redux'
+import React, {Component} from 'react';
+import {connect} from 'react-redux'
 
 import ContactList from './ContactList';
 import AddContact from "./AddContact";
 
-class Contacts extends React.Component {
+class Contacts extends Component {
 
      state ={
         contacts: [
@@ -60,7 +60,6 @@ class Contacts extends React.Component {
                     contacts={this.state.contacts}
                     updateContact = {this.updateContact}
                     removeContact = {this.removeContact}/>
-
             </React.Fragment>
         )
     }

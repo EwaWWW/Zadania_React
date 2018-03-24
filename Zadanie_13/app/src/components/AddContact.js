@@ -1,5 +1,5 @@
-import React from 'react';
-import {connect} from 'redux'
+import React, {Component} from 'react';
+import {connect} from 'react-redux'
 
 
 const initialState = {
@@ -9,7 +9,7 @@ const initialState = {
     contactCategory: ''
 };
 
-class AddContact extends React.Component {
+class AddContact extends Component {
 
     state = initialState;
 

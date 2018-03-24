@@ -1,12 +1,7 @@
-import React from 'react';
-import {connect} from 'redux'
+import React,{Component} from 'react';
+import {connect} from 'react-redux'
 
-class ContactList extends React.Component {
-
-    handleRemoveClick = event => {
-        const contactId = event.target.dataset.contactId;
-        this.props.removeContact(contactId)
-    };
+class ContactList extends Component {
 
     render(){
 
@@ -21,8 +16,13 @@ class ContactList extends React.Component {
                         <li key = {contact.id}>
                             <strong>{contact.name}</strong>
                             <br/>{contact.phone}, {contact.email}<br/>
-                            {contact.category}<br/>
-                            <button onClick={this.handleRemoveClick}>remove</button>
+                            {contact.category.map((contact) =>{
+                                return (<span>[{(contact)}]</span>)
+                            })}<br/>
+                            <button data-contact-id={contact.id}
+                                    onClick={[() => this.props.remove(contact.id)]}>
+                                remove
+                            </button>
                         </li>
                     )
                 })}
@@ -32,6 +32,8 @@ class ContactList extends React.Component {
     }
 }
 
-export default connect (state => ({
-    contacts: state.contacts.data
-}))(ContactList)
+const mapStateProps = state => ({ contacts: state.contacts.data});
+
+const mapDispatchProps = dispatch => ({ remove: id=> dispatch({type:'REMOVE', id})});
+
+export default connect ( mapDispatchProps, mapStateProps)(ContactList)
